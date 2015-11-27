@@ -1,0 +1,57 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#typeheadComponent.temp{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#typeheadComponent input{
+  width: 400px;
+  /*height: 30px;
+  line-height: 30px;*/
+}
+.dropdown{
+  padding: 10px;
+  list-style: none;
+  width: 400px;
+}
+.dropdown li{
+  /*display: none;*/
+  margin: 1px 0;
+  border: 1px solid #333333;
+}
+.hidden{
+  display: none;
+}
+
+
+@media only screen and (max-width : 1024px) {
+  .dropdown li{
+    background: green;
+  }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 800px) {
+  .dropdown li{
+    background: white;
+  }
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+@media only screen and (max-width : 640px) {
+  .dropdown li{
+    background: yellow;
+  }
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width : 324px) {
+  .dropdown li{
+    background: white;
+  }
+}
