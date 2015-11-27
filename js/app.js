@@ -15,6 +15,13 @@ $(document).ready(function() {
     desc: "zxczxcacsasc"
   }];
 
+  function Typeahead(minCharLength, delay, source, hint) {
+      this.minCharLength = minCharLength || 3;
+      this.delay = delay || 0;
+      this.source = source || {};
+      this.hint = hint;
+  }
+
   $("#typeaheadInput").on('keyup',function () {
 
     if($(this).val().length >= minCharLength ){
@@ -24,6 +31,11 @@ $(document).ready(function() {
 
   });
 
+  $("#typeaheadInput").on('focus',function () {
+    if($(this).val().length >= minCharLength ){
+      $(".dropdown").removeClass('hidden');
+    }
+  });
 
   $("#typeaheadInput").on('blur', function () {
     $(".dropdown").addClass('hidden');
@@ -31,7 +43,7 @@ $(document).ready(function() {
 
   $(".dropdown").find(".itm").on('click', function () {
     var val = $(this).html();
-    $("#typeaheadInput").val(val)
+    $("#typeaheadInput").val(val);
   });
 
 
