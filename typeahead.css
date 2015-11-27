@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
 }
+html, body{
+  height: 100%;
+
+}
 #typeheadComponent.temp{
   position: absolute;
   top: 50%;
@@ -18,40 +22,68 @@
   list-style: none;
   width: 400px;
 }
-.dropdown li{
-  /*display: none;*/
-  margin: 1px 0;
-  border: 1px solid #333333;
-}
-.hidden{
+
+.dropdown.hidden{
   display: none;
 }
 
+.dropdown .itm{
+  margin: 1px 0;
+  border: 1px solid #333333;
+  cursor: pointer;
+}
+.dropdown .itm.selected{
+  background: #06746e;
+}
+.dropdown .itm:hover{
+  background: #06746e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width : 1024px) {
-  .dropdown li{
+  .dropdown .itm{
     background: green;
   }
 
 }
 
-/* Smartphones (landscape) ----------- */
 @media only screen and (max-width : 800px) {
-  .dropdown li{
+  .dropdown .itm{
     background: white;
   }
 }
 
-/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
 @media only screen and (max-width : 640px) {
-  .dropdown li{
+  .dropdown .itm{
     background: yellow;
   }
 }
 
-/* Smartphones (portrait) (ie: Galaxy 1) */
 @media only screen and (max-width : 324px) {
-  .dropdown li{
+  .dropdown .itm{
     background: white;
   }
 }
